@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.wildma.androidnotes"
+<manifest
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -14,13 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--解决 Android 9.0 使用 HttpClient
-        报错 ClassNotFoundException: Didn't find class "org.apache.http.impl.client.DefaultHttpClient 的问题-->
+        <!-- Keep the legacy HttpClient runtime available for the HTTP examples. -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -29,28 +28,28 @@
         </activity>
         <activity
             android:name=".thread.ThreadActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".thread.MultiThreadActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".thread.MultiThread2Activity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".thread.ThreadPoolActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".thread.AboutThreadActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".http.HttpActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".okhttp.OkHttpActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
         <activity
             android:name=".retrofit.RetrofitActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false"/>
     </application>
 
 </manifest>

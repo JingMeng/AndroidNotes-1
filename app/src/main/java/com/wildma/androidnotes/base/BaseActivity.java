@@ -1,16 +1,16 @@
 package com.wildma.androidnotes.base;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 
 
 /**
  * Author   wildma
  * Date     2019/04/16
- * Desc     ${Activity基类}
+ * Desc     ${Activity鍩虹被}
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -26,17 +26,17 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 初始化布局
+     * 鍒濆鍖栧竷灞€
      */
     protected abstract int initLayoutId();
 
     /**
-     * 初始化View
+     * 鍒濆鍖朧iew
      */
     protected abstract void initView();
 
     /**
-     * 初始化业务逻辑
+     * 鍒濆鍖栦笟鍔￠€昏緫
      */
     protected abstract void initPresenter();
 
@@ -57,3 +57,4 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 }
+
